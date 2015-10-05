@@ -13,11 +13,18 @@ class SpaceShip(Sprite):
 
     def __init__(self, position):
         super().__init__(SpaceShip.asset, position)
+    def step(self):
+        self.x += self.vx
+        self.y += self.vy
+        self.rotation += self.vr
 
 class SpaceGame(App):
     """
     Tutorial4 space game example.
     """
+    def step(self):
+        for ship in self.getSpritesbyClass(SpaceShip):
+            ship.step()
     def __init__(self, width, height):
         super().__init__(width, height)
         black = Color(0, 1)
@@ -27,6 +34,9 @@ class SpaceGame(App):
         SpaceShip((100,100))
         SpaceShip((150,150))
         SpaceShip((200,50))
+        self.vx = 1
+        self.vy = 1
+        self.vr = 0.01
 
 myapp = SpaceGame(SCREEN_WIDTH, SCREEN_HEIGHT)
 myapp.run()
