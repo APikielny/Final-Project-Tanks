@@ -12,12 +12,16 @@ class SpaceShip(Sprite):
         Frame(227,0,292-227,125), 4, 'vertical')
 
     def __init__(self, position):
-        super().__init__
+        super().__init__(SpaceShip.asset, position)
+        self.vx = 1
+        self.vy = 1
+        self.vr = 0.01
         self.thrust = 0
         self.thrustframe = 1
         SpaceGame.listenKeyEvent("keydown", "space", self.thrustOn)
         SpaceGame.listenKeyEvent("keyup", "space", self.thrustOff)
         self.fxcenter = self.fycenter = 0.5
+
     def step(self):
         self.x += self.vx
         self.y += self.vy
@@ -29,31 +33,33 @@ class SpaceShip(Sprite):
                 self.thrustframe = 1
         else:
             self.setImage(0)
+
     def thrustOn(self, event):
         self.thrust = 1
 
     def thrustOff(self, event):
         self.thrust = 0
 
+
+
 class SpaceGame(App):
     """
     Tutorial4 space game example.
     """
-    def step(self):
-        for ship in self.getSpritesbyClass(SpaceShip):
-            ship.step()
     def __init__(self, width, height):
         super().__init__(width, height)
         black = Color(0, 1)
         noline = LineStyle(0, black)
-        bg_asset = RectangleAsset(SCREEN_WIDTH, SCREEN_HEIGHT, noline, black)
+        bg_asset = RectangleAsset(width, height, noline, black)
         bg = Sprite(bg_asset, (0,0))
         SpaceShip((100,100))
         SpaceShip((150,150))
         SpaceShip((200,50))
-        self.vx = 1
-        self.vy = 1
-        self.vr = 0.01
+
+    def step(self):
+        for ship in self.getSpritesbyClass(SpaceShip):
+            ship.step()
+
 
 myapp = SpaceGame(SCREEN_WIDTH, SCREEN_HEIGHT)
 myapp.run()
