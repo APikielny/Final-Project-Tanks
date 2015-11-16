@@ -52,8 +52,8 @@ class TankGame(App):
         noline = LineStyle(0, black)
         bg_asset = RectangleAsset(width, height, noline, black)
         bg = Sprite(bg_asset, (0,0))
-        Tank((100,100))
-        Bullet((100,100))
+        tankOne=Tank((200,300))
+        Bullet((tankOne.position))
 
     def step(self):
         for ship in self.getSpritesbyClass(Tank):
