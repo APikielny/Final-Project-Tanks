@@ -22,7 +22,7 @@ class Tank(Sprite):
         self.vy=0
         self.vr=0
         self.scale=.5
-        
+
     def step(self):
         self.x += self.vx
         self.y += self.vy
