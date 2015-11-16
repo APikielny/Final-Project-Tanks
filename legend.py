@@ -18,29 +18,31 @@ class Tank(Sprite):
     asset = ImageAsset("images/tanks_by_fvsj-d6if9gt.png", Frame(100,550,350,160), 1, 'vertical')
     def __init__(self, position):
         super().__init__(Tank.asset, position)
-        self.vx=3
-        self.vy=-5
+        self.vx=1
+        self.vy=-1
         self.vr=0
+        self.scale=.5
         
     def step(self):
         self.x += self.vx
         self.y += self.vy
-        self.vy += .1
+        self.vy += .01
         self.rotation += self.vr
         
-"""class Bullet(Sprite):
-    asset = ImageAsset("images/tanks_by_fvsj-d6if9gt.png", Frame(100,550,350,160), 1, 'vertical')
+class Bullet(Sprite):
+    asset = ImageAsset("images/orb-150545_640.png")
 
     def __init__(self, position):
-        super().__init__(Tank.asset, position)
+        super().__init__(Bullet.asset, position)
         self.vx=5
         self.vy=5
+        self.scale=.1
 
     def step(self):
         self.x += self.vx
         self.y += self.vy
         #self.vy-=.5
-        self.rotation += self.vr"""
+        self.rotation += self.v
 
 
 class TankGame(App):
@@ -51,6 +53,7 @@ class TankGame(App):
         bg_asset = RectangleAsset(width, height, noline, black)
         bg = Sprite(bg_asset, (0,0))
         Tank((100,100))
+        Bullet((100,100))
 
     def step(self):
         for ship in self.getSpritesbyClass(Tank):
