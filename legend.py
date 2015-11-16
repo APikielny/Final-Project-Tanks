@@ -53,8 +53,11 @@ class TankGame(App):
         bg_asset = RectangleAsset(width, height, noline, black)
         bg = Sprite(bg_asset, (0,0))
         tankOne=Tank((200,300))
-        Bullet((tankOne.position))
-
+        bulletOne=Bullet((tankOne.position))
+        tankTwo=Tank((400,300))
+        bulletTwo=Bullet((tankTwo.position))
+        
+        
     def step(self):
         for ship in self.getSpritesbyClass(Tank):
             ship.step()
