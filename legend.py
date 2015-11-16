@@ -22,6 +22,7 @@ class Tank(Sprite):
         super().__init__(Tank.asset, position)
         self.vx=1
         self.vy=1
+        self.vr=0
         
     def step(self):
         self.x += self.vx
@@ -54,7 +55,7 @@ class TankGame(App):
         Tank((100,100))
 
     def step(self):
-        for ship in self.getSpritesbyClass(TankGame):
+        for ship in self.getSpritesbyClass(Tank):
             ship.step()
 
 
