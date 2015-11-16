@@ -34,15 +34,16 @@ class Bullet(Sprite):
 
     def __init__(self, position):
         super().__init__(Bullet.asset, position)
-        self.vx=5
-        self.vy=5
+        self.vx=1
+        self.vy=-1
         self.scale=.1
+        self.vr=0
 
     def step(self):
         self.x += self.vx
         self.y += self.vy
-        #self.vy-=.5
-        self.rotation += self.v
+        self.vy += .5
+        self.rotation += self.vr
 
 
 class TankGame(App):
@@ -57,6 +58,8 @@ class TankGame(App):
 
     def step(self):
         for ship in self.getSpritesbyClass(Tank):
+            ship.step()
+        for ship in self.getSpritesbyClass(Bullet):
             ship.step()
 
 
