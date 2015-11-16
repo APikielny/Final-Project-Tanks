@@ -18,15 +18,14 @@ class Tank(Sprite):
     asset = ImageAsset("images/tanks_by_fvsj-d6if9gt.png", Frame(100,550,350,160), 1, 'vertical')
     def __init__(self, position):
         super().__init__(Tank.asset, position)
-        self.vx=1
-        self.vy=-1
+        self.vx=0
+        self.vy=0
         self.vr=0
         self.scale=.5
         
     def step(self):
         self.x += self.vx
         self.y += self.vy
-        self.vy += .01
         self.rotation += self.vr
         
 class Bullet(Sprite):
@@ -35,14 +34,14 @@ class Bullet(Sprite):
     def __init__(self, position):
         super().__init__(Bullet.asset, position)
         self.vx=1
-        self.vy=-1
+        self.vy=-.5
         self.scale=.1
         self.vr=0
 
     def step(self):
         self.x += self.vx
         self.y += self.vy
-        self.vy += .5
+        self.vy += .05
         self.rotation += self.vr
 
 
