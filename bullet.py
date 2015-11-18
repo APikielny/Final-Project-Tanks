@@ -18,3 +18,5 @@ class Bullet(Sprite):
         self.y += self.vy
         self.vy += .05
         self.rotation += .1
+        if self.collidingWith(self.Tank):
+            self.destroy()
