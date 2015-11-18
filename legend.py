@@ -29,20 +29,23 @@ class Tank(Sprite):
         self.rotation += self.vr
         
 class Bullet(Sprite):
-    asset = ImageAsset("images/orb-150545_640.png")
+    asset = ImageAsset("images/300px-BM_Grenade.png", Frame(100,20,100,115), 1, 'vertical')
 
     def __init__(self, position):
         super().__init__(Bullet.asset, position)
         self.vx=1
         self.vy=-.5
-        self.scale=.1
+        self.vr=1
+        self.scale=.5
         self.vr=0
+        self.fxcenter = .5
+        self.fycenter = .5
 
     def step(self):
         self.x += self.vx
         self.y += self.vy
         self.vy += .05
-        self.rotation += self.vr
+        self.rotation += .1
 
 
 class TankGame(App):
@@ -63,6 +66,7 @@ class TankGame(App):
             ship.step()
         for ship in self.getSpritesbyClass(Bullet):
             ship.step()
+            
 
 
 myapp = TankGame(SCREEN_WIDTH, SCREEN_HEIGHT)
