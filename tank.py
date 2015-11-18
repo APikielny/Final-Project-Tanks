@@ -17,5 +17,5 @@ class Tank(Sprite):
         self.rotation += self.vr
 
     def moveleft(self,event):
-        self.vx+=5
+        self.vx+=.5
         
