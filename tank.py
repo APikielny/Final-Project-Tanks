@@ -1,5 +1,6 @@
+from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame
+
 class Tank(Sprite):
-    from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame
 
     asset = ImageAsset("images/tanks_by_fvsj-d6if9gt.png", Frame(100,550,350,160), 1, 'vertical')
     def __init__(self, position):
