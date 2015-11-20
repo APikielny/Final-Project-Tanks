@@ -9,13 +9,13 @@ class Tank(Sprite):
         self.vy=0
         self.vr=0
         self.scale=.5
-        TankGame.listenKeyEvent("keydown", "left arrow", self.moveleft)
+        #TankGame.listenKeyEvent("keydown", "left arrow", self.moveleft)
     
     def step(self):
         self.x += self.vx
         self.y += self.vy
         self.rotation += self.vr
 
-    def moveleft(self,event):
-        self.vx+=.5
+    """def moveleft(self,event):
+        self.vx+=.5"""
         
