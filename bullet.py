@@ -1,5 +1,7 @@
 from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame
+from tank import Tank
 
+ 
 class Bullet(Sprite):
     asset = ImageAsset("images/300px-BM_Grenade.png", Frame(100,20,100,115), 1, 'vertical')
 
@@ -18,5 +20,5 @@ class Bullet(Sprite):
         self.y += self.vy
         self.vy += .05
         self.rotation += .1
-        if self.collidingWith(self.Tank):
+        if self.collidingWith(Tank):
             self.destroy()
