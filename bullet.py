@@ -7,18 +7,21 @@ class Bullet(Sprite):
 
     def __init__(self, position):
         super().__init__(Bullet.asset, position)
-        self.vx=1
-        self.vy=-.5
-        self.vr=1
+        self.vx=3
+        self.vy=-2
         self.scale=.5
         self.vr=0
         self.fxcenter = .5
         self.fycenter = .5
+
 
     def step(self):
         self.x += self.vx
         self.y += self.vy
         self.vy += .05
         self.rotation += .1
-        if self.collidingWithSprites(Tank):
-            self.destroy()
+        if self.collidingWithSprites(Tank):  
+            if self.away:
+                self.destroy()
+        elif self.away == False:
+            self.away == True
