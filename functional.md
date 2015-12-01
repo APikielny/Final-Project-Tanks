@@ -7,7 +7,6 @@ A functional specification describes in great detail how a device or program wil
 
 Your specification should include the following types of information:
 
-A title. Replace the title at the beginning of this document.
 Summary or introduction. In general, in a few lines or less, what is your program about or what is it about?
 How does the user access your program? Is it shared via http://runpython.com? Is a web site? Embedded in a single board computer?
 If there are graphics screens involved, describe every screen that the user will experience: what is it for? What did the user have to do to get there and how does she move on to the next?
@@ -22,3 +21,6 @@ The language you will use to create it.
 Names of any specific files in the project.
 How you will structure the classes, functions and code in your program.
 The name of any files or tools that you will use to design the program.
+
+We will use Python 3. We will have an app file, a tank file, and a bullet file. 
+Our project is a tank game, with two players. Each player can use the arrow keys to aim, and then fire their bullets.
