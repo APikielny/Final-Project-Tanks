@@ -31,7 +31,5 @@ class TankGame(App):
         for ship in self.getSpritesbyClass(Bullet):
             ship.step()
             
-
-
 myapp = TankGame(SCREEN_WIDTH, SCREEN_HEIGHT)
 myapp.run()
