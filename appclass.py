@@ -11,7 +11,6 @@ from bullet import Bullet
 
 SCREEN_WIDTH = 640
 SCREEN_HEIGHT = 480
-print("test")
 
 class TankGame(App):
     def __init__(self, width, height):
