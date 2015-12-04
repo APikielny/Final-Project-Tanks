@@ -22,6 +22,8 @@ class Bullet(Sprite):
         self.rotation += .1
         if self.collidingWithSprites(Tank):  
             if self.away:
+                print("AWAY")
                 self.destroy()
         elif self.away == False:
+            print("NOT AWAY")
             self.away == True
