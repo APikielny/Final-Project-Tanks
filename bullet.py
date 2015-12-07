@@ -22,7 +22,7 @@ class Bullet(Sprite):
     def step(self):
         self.x += self.vx
         self.y += self.vy
-        self.vy += .005
+        self.vy += .05
         self.rotation += .1
         #if self.collidingWithSprites(Tank):  
             #print("COLLIDING")
