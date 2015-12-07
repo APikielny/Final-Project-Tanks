@@ -8,7 +8,7 @@ class Bullet(Sprite):
 
     def __init__(self, position):
         super().__init__(Bullet.asset, position)
-        t = .75
+        t = .95
         V = 4
         self.vx=V*math.cos(t)
         self.vy=-V*math.sin(t)
