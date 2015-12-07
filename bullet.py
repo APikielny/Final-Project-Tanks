@@ -25,7 +25,7 @@ class Bullet(Sprite):
             print("COLLIDING")
             if self.away == True:
                 print("AWAY")
-                self.destroy()
+                self.away = False
         elif self.away == False:
             print("NOT AWAY")
-            self.away = True
+            self.destroy()
