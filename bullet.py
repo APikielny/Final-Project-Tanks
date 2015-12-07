@@ -13,7 +13,7 @@ class Bullet(Sprite):
         self.vr=0
         self.fxcenter = .5
         self.fycenter = .5
-        self.away == True
+        self.away = True
 
 
     def step(self):
@@ -23,9 +23,9 @@ class Bullet(Sprite):
         self.rotation += .1
         if self.collidingWithSprites(Tank):  
             print("COLLIDING")
-            if self.away:
+            if self.away == True:
                 print("AWAY")
                 self.destroy()
         elif self.away == False:
             print("NOT AWAY")
-            self.away == True
+            self.away = True
