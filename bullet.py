@@ -1,5 +1,6 @@
 from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame
 from tank import Tank
+import math
 
  
 class Bullet(Sprite):
@@ -7,8 +8,9 @@ class Bullet(Sprite):
 
     def __init__(self, position):
         super().__init__(Bullet.asset, position)
-        self.vx=3
-        self.vy=-2
+        t = .75
+        self.vx=math.cos(t)
+        self.vy=-math.sin(t)
         self.scale=.5
         self.vr=0
         self.fxcenter = .5
