@@ -20,7 +20,7 @@ class TankGame(App):
         bg_asset = RectangleAsset(width, height, noline, black)
         bg = Sprite(bg_asset, (0,0))
         tankOne=Tank((200,300))
-        bulletOne=Bullet((100,100))
+        bulletOne=Bullet((tankOne.position))
         #tankTwo=Tank((400,300))
         #bulletTwo=Bullet((tankTwo.position))
         
