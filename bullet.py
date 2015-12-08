@@ -16,7 +16,7 @@ class Bullet(Sprite):
         self.vr=0
         self.fxcenter = .5
         self.fycenter = .5
-        self.away = True
+        self.away = False
 
 
     def step(self):
