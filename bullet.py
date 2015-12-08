@@ -24,11 +24,11 @@ class Bullet(Sprite):
         self.y += self.vy
         self.vy += .05
         self.rotation += .1
-        #if self.collidingWithSprites(Tank):  
-            #print("COLLIDING")
-            #if self.away == True:
-                #print("AWAY")
-                #self.away = False
-        #elif self.away == False:
-            #print("NOT AWAY")
-            #self.destroy()
+        if self.collidingWithSprites(Tank):  
+            print("COLLIDING")
+            if self.away == True:
+                print("AWAY")
+                self.away = False
+        elif self.away == False:
+            print("NOT AWAY")
+            self.destroy()
