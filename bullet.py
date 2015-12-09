@@ -18,6 +18,8 @@ class Bullet(Sprite):
         self.fxcenter = .5
         self.fycenter = .5
         self.away = False
+        self.explode = True
+        self.explodeframe = 1
 
 
     def step(self):
