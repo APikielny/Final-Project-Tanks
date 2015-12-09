@@ -5,6 +5,7 @@ import math
  
 class Bullet(Sprite):
     asset = ImageAsset("images/300px-BM_Grenade.png", Frame(100,20,100,115), 1, 'vertical')
+    asset2 = ImageAsset("images/GrenadeExplosion.png", Frame(0,0,51.2,128), 20, 'horizontal')
 
     def __init__(self, position):
         super().__init__(Bullet.asset, position)
@@ -27,10 +28,9 @@ class Bullet(Sprite):
         colliding = self.collidingWithSprites(Tank)
         if colliding and self.away == True:  
             self.destroy()
-            #print("COLLIDING")
-            #if self.away == True:
-                #print("AWAY")
-                #self.away = False
+            self.setImage(self.explodeframe)
+            self.explodeframe += 1
+            if self.explodeframe == 20:
+                self.explodeframe = 1
         elif not colliding and self.away == False:
-            #print("NOT AWAY")
             self.away = True
