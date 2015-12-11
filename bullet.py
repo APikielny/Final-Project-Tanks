@@ -31,9 +31,14 @@ class Bullet(Sprite):
         if colliding and self.away == True:
             self.vx=0
             self.vy=0
-            self.setImage(self.explodeframe)
+            self.rotation=0
+            self.boom
+        elif not colliding and self.away == False:
+            self.away = True
+    
+    def boom(self):
+        print("boom")
+        self.setImage(self.explodeframe)
             self.explodeframe += 1
             if self.explodeframe == 20:
                 self.explodeframe = 1
-        elif not colliding and self.away == False:
-            self.away = True
