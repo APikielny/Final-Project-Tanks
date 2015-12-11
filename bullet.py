@@ -29,7 +29,6 @@ class Bullet(Sprite):
         self.rotation += .1
         colliding = self.collidingWithSprites(Tank)
         if colliding and self.away == True:  
-            self.destroy()
             self.setImage(self.explodeframe)
             self.explodeframe += 1
             if self.explodeframe == 20:
