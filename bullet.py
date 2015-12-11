@@ -30,6 +30,7 @@ class Bullet(Sprite):
             self.vy=0
             self.rotation=0
             Explosion(self.position)
+            print("boom")
             self.destroy()
         elif not colliding and self.away == False:
             self.away = True
@@ -50,7 +51,6 @@ class Explosion(Sprite):
         self.explodeframe = 1
         
     def step(self):
-        print("boom")
         self.setImage(self.explodeframe)
             self.explodeframe += 1
             if self.explodeframe == 20:
