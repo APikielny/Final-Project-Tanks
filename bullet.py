@@ -5,7 +5,6 @@ import math
  
 class Bullet(Sprite):
     asset = ImageAsset("images/300px-BM_Grenade.png", Frame(100,20,100,115), 1, 'vertical')
-    asset2 = ImageAsset("images/GrenadeExplosion.png", Frame(0,0,51.2,128), 20, 'horizontal')
 
     def __init__(self, position):
         super().__init__(Bullet.asset, position)
@@ -18,9 +17,7 @@ class Bullet(Sprite):
         self.fxcenter = .5
         self.fycenter = .5
         self.away = False
-        self.explode = True
-        self.explodeframe = 1
-
+        
 
     def step(self):
         self.x += self.vx
@@ -32,7 +29,8 @@ class Bullet(Sprite):
             self.vx=0
             self.vy=0
             self.rotation=0
-            #self.boom
+            Explosion(self.position)
+            self.destroy()
         elif not colliding and self.away == False:
             self.away = True
     
@@ -42,3 +40,19 @@ class Bullet(Sprite):
             self.explodeframe += 1
             if self.explodeframe == 20:
                 self.explodeframe = 1"""
+                
+class Explosion(Sprite):
+    asset = ImageAsset("images/GrenadeExplosion.png", Frame(0,0,51.2,128), 20, 'horizontal')
+    
+    def __init__(self,position):
+        super().__init__(Explosion.asset, position)
+        self.explode = True
+        self.explodeframe = 1
+        
+    def step(self):
+        print("boom")
+        self.setImage(self.explodeframe)
+            self.explodeframe += 1
+            if self.explodeframe == 20:
+                self.explodeframe = 1
+        
