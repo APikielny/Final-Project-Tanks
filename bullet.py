@@ -53,6 +53,6 @@ class Explosion(Sprite):
     def step(self):
         self.setImage(self.explodeframe)
         self.explodeframe += 1
-            if self.explodeframe == 20:
-                self.explodeframe = 1
+        if self.explodeframe == 20:
+            self.explodeframe = 1
         
