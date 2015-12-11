@@ -32,7 +32,7 @@ class Bullet(Sprite):
             self.vx=0
             self.vy=0
             self.rotation=0
-            self.boom
+            #self.boom
         elif not colliding and self.away == False:
             self.away = True
     
