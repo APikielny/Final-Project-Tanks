@@ -33,7 +33,6 @@ class Bullet(Sprite):
             self.rotation=0
             Explosion(self.position)
             print("boom")
-            self.destroy()
         elif not colliding and self.away == False:
             self.away = True
     
