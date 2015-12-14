@@ -21,9 +21,10 @@ class Bullet(Sprite):
 
     def step(self):
         if self.asked==False:
-            t=int(input("Input an angle."))*(math.pi/180)
-            self.vx=4*math.cos(t)
-            self.vy=-4*math.sin(t)
+            t=int(input("Input an angle, in degrees, between 0 and 180."))*(math.pi/180)
+            V=int(input("Input a magnitude. This should be a number between 1 and 5."))
+            self.vx=V*math.cos(t)
+            self.vy=-V*math.sin(t)
             self.asked=True
         self.x += self.vx
         self.y += self.vy
