@@ -8,18 +8,20 @@ class Bullet(Sprite):
 
     def __init__(self, position):
         super().__init__(Bullet.asset, position)
-        t = 1.57
-        V = 4
-        self.vx=V*math.cos(t)
-        self.vy=-V*math.sin(t)
+        #V = 4
         self.scale=.5
         self.vr=0
         self.fxcenter = .5
         self.fycenter = .5
         self.away = False
-        
+        self.asked= False
 
     def step(self):
+        if self.asked==False:
+            t=int(input("Input an angle."))*(math.pi/180)
+            self.vx=4*math.cos(t)
+            self.vy=-4*math.sin(t)
+            self.asked=True
         self.x += self.vx
         self.y += self.vy
         self.vy += .05
