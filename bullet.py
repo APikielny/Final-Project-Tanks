@@ -49,7 +49,7 @@ class Explosion(Sprite):
     
     def __init__(self,position):
         super().__init__(Explosion.asset, position)
-        self.Explosion = True
+        self.Explosion = 0
         self.Explosionframe = 1
         
     def step(self):
