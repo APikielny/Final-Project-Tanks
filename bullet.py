@@ -37,24 +37,24 @@ class Bullet(Sprite):
         elif not colliding and self.away == False:
             self.away = True
     
-    def boom(self):
+    """def boom(self):
         print("boom")
         self.setImage(self.explodeframe)
             self.explodeframe += 1
             if self.explodeframe == 20:
-                self.explodeframe = 1
+                self.explodeframe = 1"""
                 
 class Explosion(Sprite):
     asset = ImageAsset("images/GrenadeExplosion.png", Frame(0,0,51.2,128), 20, 'horizontal')
     
     def __init__(self,position):
         super().__init__(Explosion.asset, position)
-        self.explode = True
-        self.explodeframe = 1
+        self.Explosion = True
+        self.Explosionframe = 1
         
     def step(self):
-        self.setImage(self.explodeframe)
-        self.explodeframe += 1
-        if self.explodeframe == 20:
-            self.explodeframe = 1
+        self.setImage(self.Explosionframe)
+        self.Explosionframe += 1
+        if self.Explosionframe == 20:
+            self.destroy()
         
