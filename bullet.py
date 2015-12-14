@@ -23,8 +23,8 @@ class Bullet(Sprite):
         """if self.asked==False:
             t=int(input("Input an angle."))*(math.pi/180)
             self.vx=4*math.cos(t)
-            self.vy=-4*math.sin(t)"""
-            self.asked=True
+            self.vy=-4*math.sin(t)
+            self.asked=True"""
         self.x += self.vx
         self.y += self.vy
         self.vy += .05
