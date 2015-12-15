@@ -30,8 +30,8 @@ class TankGame(App):
             ship.step()
         for ship in self.getSpritesbyClass(Bullet):
             ship.step()
-        for Explosion in self.getSpritesbyClass(Explosion):
-            Explosion.step()
+        for ship in self.getSpritesbyClass(Explosion):
+            ship.step()
             
 myapp = TankGame(SCREEN_WIDTH, SCREEN_HEIGHT)
 myapp.run()
