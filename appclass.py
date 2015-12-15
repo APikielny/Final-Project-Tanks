@@ -7,7 +7,7 @@ Tank Game
 
 from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame
 from tank import Tank
-from bullet import Bullet
+from bullet import Bullet, Explosion
 
 SCREEN_WIDTH = 640
 SCREEN_HEIGHT = 480
