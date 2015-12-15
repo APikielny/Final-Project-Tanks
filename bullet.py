@@ -32,16 +32,10 @@ class Bullet(Sprite):
             self.vy=0
             self.rotation=0
             Explosion(self.position)
-            print("boom")
+            self.destroy()
         elif not colliding and self.away == False:
             self.away = True
-    
-    """def boom(self):
-        print("boom")
-        self.setImage(self.explodeframe)
-            self.explodeframe += 1
-            if self.explodeframe == 20:
-                self.explodeframe = 1"""
+   
                 
 class Explosion(Sprite):
     asset = ImageAsset("images/GrenadeExplosion.png", Frame(0,0,51.2,128), 20, 'horizontal')
