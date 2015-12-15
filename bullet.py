@@ -38,7 +38,7 @@ class Bullet(Sprite):
    
                 
 class Explosion(Sprite):
-    asset = ImageAsset("images/GrenadeExplosion.png", Frame(0,0,51.2,128), 20, 'horizontal')
+    asset = ImageAsset("images/GrenadeExplosion.png", Frame(0,0,50,128), 20, 'horizontal')
     
     def __init__(self,position):
         super().__init__(Explosion.asset, position)
