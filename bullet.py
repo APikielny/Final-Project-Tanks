@@ -26,10 +26,10 @@ class Bullet(Sprite):
         self.y += self.vy
         self.vy += .05
         self.rotation += .1
-        if self.colldingWithSprites(Tank)==True or self.collidingWithSprites(bg) == True:
+        if self.collidingWithSprites(Tank) or self.collidingWithSprites(bg):
             colliding = True
         else:
-            colliding=False
+            colliding = False
         if colliding and self.away == True:
             self.vx=0
             self.vy=0
