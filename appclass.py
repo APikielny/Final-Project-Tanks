@@ -19,7 +19,7 @@ class TankGame(App):
         noline = LineStyle(0, black)
         bg_asset = ImageAsset("images/Landscape.png")
         bg = Sprite(bg_asset, (0,0))
-        tankOne=Tank((200,0))
+        tankOne=Tank((200,75))
         bulletOne=Bullet((tankOne.position))
         #tankTwo=Tank((400,300))
         #bulletTwo=Bullet((tankTwo.position))
