@@ -7,7 +7,7 @@ import math
 class Bullet(Sprite):
     asset = ImageAsset("images/300px-BM_Grenade.png", Frame(100,20,100,115), 1, 'vertical')
 
-    def __init__(self, position):
+    def __init__(self, position, app):
         super().__init__(Bullet.asset, position)
         self.scale=.5
         self.vr=0
@@ -15,6 +15,7 @@ class Bullet(Sprite):
         self.fycenter = .5
         self.away = False
         self.asked= False
+        self.app=app
 
     def step(self):
         if self.asked==False:
@@ -27,7 +28,7 @@ class Bullet(Sprite):
         self.y += self.vy
         self.vy += .05
         self.rotation += .1
-        if self.collidingWithSprites(Tank):# or self.collidingWithSprites(myapp.bg):
+        if self.collidingWithSprites(Tank) or self.collidingWithSprites(self.app.bg):
             colliding = True
         else:
             colliding = False
