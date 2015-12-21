@@ -1,6 +1,6 @@
 from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame
 from tank import Tank
-from appclass import myapp
+#from appclass import myapp
 import math
 
  
