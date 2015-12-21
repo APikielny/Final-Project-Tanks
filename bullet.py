@@ -28,7 +28,7 @@ class Bullet(Sprite):
         self.y += self.vy
         self.vy += .05
         self.rotation += .1
-        if self.collidingWithSprites(Tank) or self.collidingWithSprites(self.app.bg):
+        if self.collidingWithSprites(Tank) or self.collidingWith(self.app.bg):
             colliding = True
         else:
             colliding = False
