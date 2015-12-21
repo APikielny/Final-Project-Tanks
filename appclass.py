@@ -17,7 +17,7 @@ class TankGame(App):
         super().__init__(width, height)
         black = Color(0, 1)
         noline = LineStyle(0, black)
-        bg_asset = RectangleAsset(self,[(0,300),(0,400),(700,400),(700,300),(0,300)],LineStyle(3,black),(f0x000000))
+        bg_asset = RectangleAsset(100,700,LineStyle(3,black),0x000000)
         self.bg = Sprite(bg_asset, (0,0))
         tankOne=Tank((200,75))
         bulletOne=Bullet((tankOne.position),self)
