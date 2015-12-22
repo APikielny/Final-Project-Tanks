@@ -15,8 +15,6 @@ class Tank(Sprite):
         self.x += self.vx
         self.y += self.vy
         self.rotation += self.vr
-        if self.collidingWithSprites(Bullet):
-            self.destroy()
 
     """def moveleft(self,event):
         self.vx+=.5"""
