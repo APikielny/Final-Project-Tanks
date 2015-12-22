@@ -36,6 +36,10 @@ class Bullet(Sprite):
             self.vx=0
             self.vy=0
             self.rotation=0
+            if self.collidingWith(tankOne):
+                tankOne.destroy()
+            elif self.collidingWith(tankTwo):
+                tankTwo.destroy()
             Explosion(self.position)
             self.destroy()
         elif not colliding and self.away == False:
