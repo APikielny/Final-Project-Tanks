@@ -28,16 +28,17 @@ class Bullet(Sprite):
         self.y += self.vy
         self.vy += .05
         self.rotation += .1
-        if self.collidingWithSprites(Tank) or self.collidingWith(self.app.bg):
+        tanklist=self.collidingWithSprites(Tank)
+        if tanklist or self.collidingWith(self.app.bg):
             colliding = True
         else:
             colliding = False
         if colliding and self.away == True:
+            for tank in tanklist:
+             tank.destroy()
             self.vx=0
             self.vy=0
             self.rotation=0
-            if self.collidingWith(tankOne):
-                tankOne.destroy()
             Explosion(self.position)
             self.destroy()
         elif not colliding and self.away == False:
