@@ -22,6 +22,7 @@ class TankGame(App):
         tankOne=Tank((200,222))
         tankTwo=Tank((400,222))
         bulletOne=Bullet((tankOne.position),self)
+        bulletTwo=Bullet((tankTwo.position),self))
         #tankTwo=Tank((400,300))
         #bulletTwo=Bullet((tankTwo.position))
         
