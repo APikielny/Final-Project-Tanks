@@ -8,6 +8,7 @@ Tank Game
 from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame
 from tank import Tank
 from bullet import Bullet, Explosion
+import random
 
 SCREEN_WIDTH = 640
 SCREEN_HEIGHT = 480
@@ -19,7 +20,7 @@ class TankGame(App):
         noline = LineStyle(0, black)
         bg = RectangleAsset(700,100,noline,Color(0x074a36,1.0))
         self.bg=Sprite(bg, (0,300))
-        tankOne=Tank((200,222))
+        tankOne=Tank((random.randint(0,200),222))
         tankTwo=Tank((400,222))
         bulletOne=Bullet((tankOne.position),self)
         bulletTwo=Bullet((tankTwo.position),self)
