@@ -2,8 +2,7 @@ from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Fra
 from tank import Tank
 #from appclass import myapp
 import math
-import time
- 
+
 class Bullet(Sprite):
     asset = ImageAsset("images/300px-BM_Grenade.png", Frame(100,20,100,115), 1, 'vertical')
 
@@ -19,7 +18,6 @@ class Bullet(Sprite):
 
     def step(self):
         if self.asked==False:
-            time.sleep(100)
             t=int(input("Input an angle, in degrees, between 0 and 180. 0 is due east."))*(math.pi/180)
             V=int(input("Input a magnitude. This should be a number between 1 and 5."))
             self.vx=V*math.cos(t)
