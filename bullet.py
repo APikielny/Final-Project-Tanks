@@ -35,7 +35,7 @@ class Bullet(Sprite):
             colliding = False
         if colliding and self.away == True:
             for tank in tanklist:
-             tank.destroy()
+                tank.destroy()
             self.vx=0
             self.vy=0
             self.rotation=0
