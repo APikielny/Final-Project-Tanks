@@ -9,7 +9,7 @@ class Bullet(Sprite):
 
     def __init__(self, position, app):
         super().__init__(Bullet.asset, position)
-        self.scale=.5
+        self.scale=.1
         self.vr=0
         self.fxcenter = .5
         self.fycenter = .5
