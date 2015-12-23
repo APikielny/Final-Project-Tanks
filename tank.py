@@ -7,7 +7,7 @@ class Tank(Sprite):
         self.vx=0
         self.vy=0
         self.vr=0
-        self.scale=.5
+        self.scale=.1
         #TankGame.listenKeyEvent("keydown", "left arrow", self.moveleft)
         print("test")
         
