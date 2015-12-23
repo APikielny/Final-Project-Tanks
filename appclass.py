@@ -18,7 +18,7 @@ class TankGame(App):
         super().__init__(width, height)
         black = Color(0x000000, 1)
         noline = LineStyle(1, black)
-        mtn = PolygonAsset([(200,222),(300,222),(250,50),(200,222)],noline,black)
+        mtn = PolygonAsset([(200,222),(300,222),(250,50),(200,222)],noline,Color(0x074a36,1.0))
         self.mtn = Sprite(mtn, (100,80))
         bg = RectangleAsset(700,100,noline,Color(0x074a36,1.0))
         self.bg=Sprite(bg, (0,300))
