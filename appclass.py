@@ -24,7 +24,7 @@ class TankGame(App):
         #bg=PolygonAsset([(0,0),(700,0),(700,200),(0,200),(0,0)],noline,Color(0x074a36,1.0))
         self.bg=Sprite(bg, (0,300))
         tankOne=Tank((random.randint(20,150),222))
-        tankTwo=Tank((random.randint(350,640),222))
+        tankTwo=Tank((random.randint(350,600),222))
         bulletOne=Bullet((tankOne.position),self)
         bulletTwo=Bullet((tankTwo.position),self)
         #tankTwo=Tank((400,300))
