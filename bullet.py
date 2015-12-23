@@ -19,7 +19,7 @@ class Bullet(Sprite):
 
     def step(self):
         if self.asked==False:
-            time.sleep(5)
+            time.sleep(100)
             t=int(input("Input an angle, in degrees, between 0 and 180. 0 is due east."))*(math.pi/180)
             V=int(input("Input a magnitude. This should be a number between 1 and 5."))
             self.vx=V*math.cos(t)
