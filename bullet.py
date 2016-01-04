@@ -18,7 +18,11 @@ class Bullet(Sprite):
 
     def step(self):
         if self.asked==False:
-            print(Tank1.position)
+            lol=input("This is the first tank's position. Press return.")
+            lmfao=input(tankOne.position + "Press return.")
+            dab=input("This is the second tank's position. Press return.")
+            gnar=input(tankTwo.position + "Press return.")
+            n00b=input("There is a wall in the middle. It is 100px high. Press return.")
             t=int(input("Input an angle, in degrees, between 0 and 180. 0 is due east."))*(math.pi/180)
             V=int(input("Input a magnitude. This should be a number between 1 and 5."))
             self.vx=V*math.cos(t)
