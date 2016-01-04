@@ -3,7 +3,7 @@ from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Fra
 class Tank1(Sprite):
     asset = ImageAsset("images/tanks_by_fvsj-d6if9gt.png", Frame(100,550,350,160), 1, 'vertical')
     def __init__(self, position):
-        super().__init__(Tank.asset, position)
+        super().__init__(Tank1.asset, position)
         self.vx=0
         self.vy=0
         self.vr=0
@@ -22,7 +22,7 @@ class Tank1(Sprite):
 class Tank2(Sprite):
     asset = ImageAsset("images/tanks_by_fvsj-d6if9gt.png", Frame(100,550,350,160), 1, 'vertical')
     def __init__(self, position):
-        super().__init__(Tank.asset, position)
+        super().__init__(Tank2.asset, position)
         self.vx=0
         self.vy=0
         self.vr=0
