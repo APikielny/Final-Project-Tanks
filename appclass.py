@@ -27,7 +27,11 @@ class TankGame(App):
         tankTwo=Tank2((random.randint(350,500),265))
         bulletOne=Bullet((tankOne.position),self)
         bulletTwo=Bullet((tankTwo.position),self)
+        print("This is the first tank's position.")
         print(tankOne.position)
+        print("This is the second tank's position.")
+        print(tankTwo.position)
+        print("There is a wall in the middle. It is 100px high.")
         #tankTwo=Tank((400,300))
         #bulletTwo=Bullet((tankTwo.position))
         
