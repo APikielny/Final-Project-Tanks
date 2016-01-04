@@ -1,5 +1,5 @@
 from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame, PolygonAsset
-from tank import Tank
+from tank import Tank1, Tank2
 #from appclass import myapp
 import math
 
@@ -27,7 +27,8 @@ class Bullet(Sprite):
         self.y += self.vy
         self.vy += .05
         self.rotation += .1
-        tanklist=self.collidingWithSprites(Tank)
+        tanklist=self.collidingWithSprites(Tank1)
+        tanklist.append(self.collidingWithSprites(Tank2))
         if tanklist or self.collidingWith(self.app.bg) or self.collidingWith(self.app.mtn):
             colliding = True
         else:
