@@ -34,7 +34,7 @@ class TankGame(App):
     def step(self):
         for ship in self.getSpritesbyClass(Tank1):
             ship.step()
-        for ship in self.getSpritesbyClass(Tank1):
+        for ship in self.getSpritesbyClass(Tank2):
             ship.step()
         for ship in self.getSpritesbyClass(Bullet):
             ship.step()
