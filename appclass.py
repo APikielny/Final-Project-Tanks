@@ -27,6 +27,7 @@ class TankGame(App):
         tankTwo=Tank2((random.randint(350,500),265))
         bulletOne=Bullet((tankOne.position),self)
         bulletTwo=Bullet((tankTwo.position),self)
+        print(tankOne.position)
         #tankTwo=Tank((400,300))
         #bulletTwo=Bullet((tankTwo.position))
         
