@@ -6,7 +6,7 @@ Tank Game
 """
 
 from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame, PolygonAsset
-from tank import Tank
+from tank import Tank1, Tank2
 from bullet import Bullet, Explosion
 import random
 
@@ -23,8 +23,8 @@ class TankGame(App):
         bg = RectangleAsset(700,100,noline,Color(0x074a36,1.0))
         #bg=PolygonAsset([(0,0),(700,0),(700,200),(0,200),(0,0)],noline,Color(0x074a36,1.0))
         self.bg=Sprite(bg, (0,300))
-        tankOne=Tank((random.randint(20,150),265))
-        tankTwo=Tank((random.randint(350,500),265))
+        tankOne=Tank1((random.randint(20,150),265))
+        tankTwo=Tank2((random.randint(350,500),265))
         bulletOne=Bullet((tankOne.position),self)
         bulletTwo=Bullet((tankTwo.position),self)
         #tankTwo=Tank((400,300))
