@@ -26,7 +26,7 @@ class TankGame(App):
         tankOne=Tank1((random.randint(20,150),265))
         tankTwo=Tank2((random.randint(350,500),265))
         lol=input("This is the horizontal position of tank 1. " + str(tankOne.x) + " Press return.")
-        amirite=input("This is the horizontal position of tank 2. " + str(tankTwo.x) + " Press return.")
+        amirite=input("This is the horizontal position of tank 2. " + str(tankTwo.x) + " Tank 1 will now be prompted to fire, and Tank 2 will be prompted afterwards. There is a wall at 295. Press return.")
         bulletOne=Bullet((tankOne.position),self)
         bulletTwo=Bullet((tankTwo.position),self)
         
