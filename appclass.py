@@ -25,8 +25,8 @@ class TankGame(App):
         self.bg=Sprite(bg, (0,300))
         tankOne=Tank1((random.randint(20,150),265))
         tankTwo=Tank2((random.randint(350,500),265))
-        lol=input("This is the position of tank 1. Press return." + str(tankOne.position))
-        amirite=input("This is the position of tank 2. First, Player 1 will be prompted to fire from Tank 1. Next, Tank 2 will be prompted. Press return." + str(tankTwo.position))
+        lol=input("This is the horizontal position of tank 1. " + str(tankOne.x) + " Press return.")
+        amirite=input("This is the horizontal position of tank 2. " + str(tankTwo.x) + " Press return.")
         bulletOne=Bullet((tankOne.position),self)
         bulletTwo=Bullet((tankTwo.position),self)
         
