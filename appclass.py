@@ -24,7 +24,7 @@ class TankGame(App):
         #bg=PolygonAsset([(0,0),(700,0),(700,200),(0,200),(0,0)],noline,Color(0x074a36,1.0))
         self.bg=Sprite(bg, (0,300))
         tankOne=Tank1((random.randint(20,150),265))
-        tankTwo=Tank2((random.randint(350,500),265))
+        tankTwo=Tank2((random.randint(350,520),265))
         lol=input("This is the horizontal position of tank 1. " + str(tankOne.x) + " Press return.")
         amirite=input("This is the horizontal position of tank 2. " + str(tankTwo.x) + " Tank 1 will now be prompted to fire, and Tank 2 will be prompted afterwards. There is a wall at 295. Press return.")
         bulletOne=Bullet((tankOne.position),self)
