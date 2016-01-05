@@ -17,7 +17,7 @@ class Bullet(Sprite):
         self.app=app
         if self.asked==False:
             t=int(input("Input an angle, in degrees, between 0 and 180. 0 is due east."))*(math.pi/180)
-            V=int(input("Input a magnitude. This should be a number between 1 and 5."))
+            V=int(input("Input a magnitude. This should be an integer between 2 and 8."))
             self.vx=V*math.cos(t)
             self.vy=-V*math.sin(t)
             self.asked=True
