@@ -1,7 +1,7 @@
 from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame
 
 class Tank1(Sprite):
-    asset = ImageAsset("images/medium_tank_by_skorpion66-d6fdave.png", Frame(100,550,350,160), 1, 'vertical')
+    asset = ImageAsset("images/medium_tank_by_skorpion66-d6fdave.png")
     def __init__(self, position):
         super().__init__(Tank1.asset, position)
         self.vx=0
